@@ -6,7 +6,7 @@ use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use Toast\Blocks\TestimonialBlock;
 use SilverStripe\Security\Permission;
-use SilverStripe\Forms\RequiredFields;
+use SilverStripe\Forms\Validation\RequiredFieldsValidator;
 
 class TestimonialBlockItem extends BlockItem
 {
@@ -62,7 +62,7 @@ class TestimonialBlockItem extends BlockItem
 
     public function getCMSValidator()
     {
-        $required = new RequiredFields(['Testimonial']);
+        $required = new RequiredFieldsValidator(['Testimonial']);
         $this->extend('updateCMSValidator', $required);
         return $required;
     }

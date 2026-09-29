@@ -7,7 +7,7 @@ use Toast\Blocks\DownloadBlock;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Security\Permission;
-use SilverStripe\Forms\RequiredFields;
+use SilverStripe\Forms\Validation\RequiredFieldsValidator;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class DownloadBlockItem extends BlockItem
@@ -58,7 +58,7 @@ class DownloadBlockItem extends BlockItem
 
     public function getCMSValidator()
     {
-        $required = new RequiredFields([
+        $required = new RequiredFieldsValidator([
             'File'
         ]);
         $this->extend('updateCMSValidator', $required);

@@ -2,7 +2,7 @@
 
 namespace Toast\Blocks;
 
-use SilverStripe\ORM\ArrayList;
+use SilverStripe\Model\List\ArrayList;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Forms\DropdownField;
 use UncleCheese\Forms\ImageOptionsetField;

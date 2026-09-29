@@ -23,7 +23,7 @@ Testimonial block
                     Testimonial item
                     ------------------------------------------------------------------%>
                     <div class="testimonials__wrap__slider__item">
-                        <img src="{$Themedir}/dist/images/svg/quotes.svg" width="88" height="72" loading="lazy">
+                        <img src="$themedResourceURL('dist/images/svg/quotes.svg')" width="88" height="72" loading="lazy">
 
                         <div class="testimonials__wrap__slider__item__testimonial">
                             <h6 class="colour--white">$Testimonial.XML</h6>

@@ -3,11 +3,10 @@
 namespace Toast\Blocks\Extensions;
 
 use Toast\Blocks\Block;
-use SilverStripe\Core\Extension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Control\Director;
 use SilverStripe\Forms\HiddenField;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldDetailForm;
@@ -20,7 +19,7 @@ use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
 
-class PageExtension extends DataExtension
+class PageExtension extends Extension
 {
     private static $many_many = [
         'ContentBlocks' => Block::class

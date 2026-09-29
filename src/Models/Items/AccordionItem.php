@@ -5,7 +5,7 @@ namespace Toast\Blocks\Items;
 use Toast\Blocks\AccordionBlock;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Security\Permission;
-use SilverStripe\Forms\RequiredFields;
+use SilverStripe\Forms\Validation\RequiredFieldsValidator;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
@@ -67,7 +67,7 @@ class AccordionItem extends BlockItem
 
     public function getCMSValidator()
     {
-        $required = new RequiredFields(['Heading', 'Content']);
+        $required = new RequiredFieldsValidator(['Heading', 'Content']);
         $this->extend('updateCMSValidator', $required);
         return $required;
     }

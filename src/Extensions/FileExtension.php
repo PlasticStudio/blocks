@@ -4,9 +4,9 @@ namespace Toast\Blocks\Extensions;
 
 use SilverStripe\Control\Controller;
 use SilverStripe\CMS\Controllers\ContentController;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 
-class FileExtension extends DataExtension
+class FileExtension extends Extension
 {
     public function getFileInfo()
     {

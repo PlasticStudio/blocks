@@ -2,7 +2,7 @@
 
 namespace Toast\Blocks;
 
-use SilverStripe\ORM\GroupedList;
+use SilverStripe\Model\List\GroupedList;
 use SilverStripe\Forms\LiteralField;
 use Toast\Blocks\Items\AccordionItem;
 use SilverStripe\ORM\FieldType\DBField;

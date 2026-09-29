@@ -4,7 +4,7 @@ namespace Toast\Blocks;
 
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\DropdownField;
-use SilverStripe\Forms\RequiredFields;
+use SilverStripe\Forms\Validation\RequiredFieldsValidator;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use UncleCheese\Forms\ImageOptionsetField;
@@ -63,7 +63,7 @@ class ImageTextBlock extends Block
 
     public function getCMSValidator()
     {
-        $required = new RequiredFields([Image::class, 'Content']);
+        $required = new RequiredFieldsValidator([Image::class, 'Content']);
         $this->extend('updateCMSValidator', $required);
         return $required;
     }

@@ -3,7 +3,7 @@
 namespace Toast\Blocks;
 
 use SilverStripe\Forms\DropdownField;
-use SilverStripe\Forms\RequiredFields;
+use SilverStripe\Forms\Validation\RequiredFieldsValidator;
 use UncleCheese\Forms\ImageOptionsetField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Core\Manifest\ModuleResourceLoader;
@@ -51,7 +51,7 @@ class TextBlock extends Block
 
     public function getCMSValidator()
     {
-        $required = new RequiredFields(['Content']);
+        $required = new RequiredFieldsValidator(['Content']);
 
         $this->extend('updateCMSValidator', $required);
 
