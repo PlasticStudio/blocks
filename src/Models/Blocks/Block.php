@@ -70,11 +70,11 @@ class Block extends DataObject
         return $this->getIconForCMS();
     }
 
-    public function forTemplate()
+    public function forTemplate(): string
     {
         $template = $this->ClassName;
         $this->extend('updateBlockTemplate', $template);
-        return $this->renderWith([$template, 'Toast\Blocks\Block']);
+        return (string) $this->renderWith([$template, 'Toast\Blocks\Block']);
     }
 
     public function getCMSFields()
