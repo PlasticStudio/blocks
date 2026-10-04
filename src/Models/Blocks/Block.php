@@ -8,6 +8,7 @@ use SilverStripe\ORM\DB;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Security\Member;
+use SilverStripe\Security\Security;
 use SilverStripe\Control\Director;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Control\Controller;
